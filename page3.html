@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <title>03</title>
+    <!-- write your code here -->
+    <script src="./static/common/gsap.js"></script>
+    <script src="./static/common/jq.js"></script>
+    <link rel="stylesheet" href="./static/common/common.css">
+    <script src="./static/common/common.js"></script>
+
+</head>
+
+<body>
+    <div class="main pos_r">
+        <div class="page1">
+            <div class="title">OUR HOTPOT</div>
+            <div class="desc">
+                Our brand of hot pot is authentic Sichuan Chongqing <br><br> hot pot, but it is halal, for the majority
+                of
+                Muslim <br> friends.
+                <div class="arrow">
+                    <img src="./images/Vector111.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="arrow1 " style="text-align: center;margin-left: 400px;">
+                <img src="./images/Vector 02.svg" alt="">
+            </div>
+            <div class="title  title1">DIFFERENT TYPES</div>
+            <div class="bo">
+                <img class="l1 pos_a" src="./images/D295DC77-AA20-447D-B878-A65E7EAA290A.png" alt="">
+                <img class="l2 pos_a" src="./images/0DA60CC7-C00B-4220-AC69-F976D35FB72C.png" alt="">
+                <img class="l3 pos_a" src="./images/1E0C5F10-1B84-4743-91FB-C3292F17B562.png" alt="">
+                <img class="l4 pos_a" src="./images/3A0AFA52-6305-4481-9D2C-010F7EACF1A2.png" alt="">
+                <img class="l5 pos_a" src="./images/87767c9d6meb4ed960cf4e398052a71c.png" alt="">
+
+            </div>
+        </div>
+        <div class="right pos_a">
+            <img src="./images/1233.png" alt="">
+        </div>
+        <div class="page pos_a">
+            <ul class="flex_y">
+                <a href="./index.html">
+                    <li>01</li>
+                </a>
+                <a href="./page2.html">
+                    <li>02</li>
+                </a>
+                <a href="./page4.html"><li class="active">03</li></a>
+                <a href="./page4.html"><li>04</li></a>
+               <a href="./page5.html"> <li>05</li></a>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function () {
+        window.onload = function () {
+            $('.main').show()
+        }
+        $('.arrow').click(function () {
+            gsap.to(".right img", {
+                x: 0,
+                y: -400,
+                opacity: 1,
+                scale: 1, // 放大倍数  
+                ease: "powerOut", // 定义动画的速度曲线  
+            });
+
+            gsap.to(".page1", {
+                opacity: 0,
+                ease: "powerOut", // 定义动画的速度曲线  
+            });
+            gsap.to(".page2", {
+                x: 0,
+                y: -160,
+                opacity: 1,
+                scale: 1, // 放大倍数  
+                ease: "powerOut", // 定义动画的速度曲线  
+            });
+        })
+        $('.arrow1').click(function () {
+
+
+            gsap.to(".page2", {
+                opacity: 0,
+                ease: "powerOut", // 定义动画的速度曲线  
+            });
+            gsap.to(".right img", {
+                x: 0,
+                y: 330,
+                opacity: 1,
+                scale: 1, // 放大倍数  
+                ease: "powerOut", // 定义动画的速度曲线  
+            });
+            gsap.to(".page1", {
+                x: 0,
+                y: 160,
+                opacity: 1,
+                scale: 1, // 放大倍数  
+                ease: "powerOut", // 定义动画的速度曲线  
+            });
+        })
+    })
+    gsap.set('.page2', { opacity: 0 });
+    gsap.set('.right img', { x: 400, y: 0, scale: .5, });
+    gsap.to(".right img", {
+        x: 650,
+        y: -300,
+        opacity: .5,
+        scale: .3, // 放大倍数  
+        ease: "powerOut", // 定义动画的速度曲线  
+    });
+    setTimeout(() => {
+        gsap.to(".right img", {
+            x: 0,
+            y: 330,
+            opacity: 1,
+            scale: 1, // 放大倍数  
+            ease: "powerOut", // 定义动画的速度曲线  
+        });
+    }, 500);
+</script>
+<style>
+    .main {
+        background-image: url("./images/背景\ 2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 80px 9px 74px 98px;
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 59px;
+        color: #fff;
+        margin-left: 650px;
+    }
+
+    /* .title1{
+        right: 10px;
+    } */
+
+    .desc {
+        color: #fff;
+        font-size: 24px;
+        line-height: 40px;
+        margin-left: 460px;
+        text-align: center;
+    }
+
+    .right {
+        bottom: -100px;
+    }
+
+    .bo {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+
+    }
+
+    .arrow {
+        margin-top: 75px;
+    }
+
+    .title1 {
+        position: relative;
+        right: 0px;
+        bottom: -130px;
+    }
+
+    .arrow1 {
+        position: absolute;
+        bottom: -50px;
+        right: 200px;
+    }
+
+    .l1 {
+        width: 650.936px;
+        height: 650.936px;
+        left: -100px;
+        bottom: -500px;
+    }
+
+    .l2 {
+        width: 290px;
+        left: 120px;
+        bottom: -500px;
+    }
+
+    .l3 {
+        width: 500px;
+        left: 290px;
+        bottom: -500px;
+    }
+
+    .l4 {
+        width: 300px;
+        right: 280px;
+        bottom: -500px;
+    }
+
+    .l5 {
+        width: 500px;
+        right: -100px;
+        bottom: -500px;
+    }
+</style>
+
+</html>

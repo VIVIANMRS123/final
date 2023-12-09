@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <title>04</title>
+    <!-- write your code here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="./static/common/common.css">
+    <script src="./static/common/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="content flex_x content1">
+            <div class="left">
+                <div class="l_content">
+                    <div class="title title2">Book seat</div>
+                    <div class="phone flex_x">
+                        <div class="plus">+60</div>
+                        <div>-</div>
+                        <div class="ins"></div>
+                    </div>
+                    <div class="phone flex_x">
+                        <div class="plus name">Name</div>
+                        <div class="plus name" style="width: 184px;margin-left: 10px;">.Gender</div>
+                        <div class="ins dd flex_x">
+                            .|Pax
+                        </div>
+                    </div>
+                    <div class="phone flex_x">
+                        <div class="plus mail">E-mail</div>
+                    </div>
+                    <div class="phone flex_x">
+                        <div class="le flex_x">
+                            <img  src="./images/Event.svg" alt="">
+                            | D/D|M/M|Y/Y
+
+                        </div>
+                        <div class="ri">
+                            <img style="margin-right: 10px;" src="./images/Vector.svg" alt="">Time
+                        </div>
+                    </div>
+                    <div class="btns flex_x">
+                        <div class="cnf">Confrim</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./images/1233.png" alt="">
+            </div>
+        </div>
+
+        <div class="page pos_a">
+            <ul class="flex_y">
+                <a href="./index.html">
+                    <li>01</li>
+                </a>
+                <a href="./page2.html">
+                    <li>02</li>
+                </a>
+                <a href="./page3.html">
+                    <li>03</li>
+                </a>
+                <a href="./page4.html"><li >04</li></a>
+                <li class="active">05</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script>
+
+    gsap.to(".right img", {
+        x: 0,
+        y: 330,
+        opacity: 1,
+        scale: 1.5, // 放大倍数  
+        ease: "powerOut", // 定义动画的速度曲线  
+    });
+$(function(){
+    $('.l_content').show(1000,'linear')
+})
+</script>
+<style>
+    .main {
+        background-image: url("./images/背景\ 2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 80px 9px 74px 98px;
+        /* display: none; */
+        overflow: hidden;
+    }
+
+    .right img {
+        width: 493px;
+        height: 480px;
+    }
+
+    .left {
+        flex: 1;
+    }
+
+    .l_content {
+        width: 587px;
+        /* height: 469px; */
+        padding-bottom: 20px;
+        border-radius: 39px;
+        border: 4px solid #FFF;
+        margin-top: 40px;
+        margin-left: 40px;
+        /* padding: 20px 40px; */
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .title {
+        font-size: 65px;
+        color: #FFF;
+        text-align: center;
+        border-bottom: 4px solid #fff;
+    }
+
+    .phone {
+        height: 80px;
+        align-items: center;
+        color: #fff;
+        font-size: 39px;
+        border-bottom: 4px solid #fff;
+    }
+
+    .plus {
+        border-radius: 9px;
+        border: 2px solid #FFF;
+        width: 95px;
+        height: 50px;
+        margin-right: 20px;
+        margin-left: 45px;
+        text-align: center;
+    }
+
+    .ins {
+        width: 349px;
+        height: 50px;
+        border-radius: 9px;
+        border: 2px solid #FFF;
+        margin-left: 20px;
+    }
+
+    .dd {
+        width: 307px;
+        padding: 0 10px;
+    }
+
+    .btns {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .cnf {
+        width: 195px;
+        height: 51px;
+        border-radius: 8px;
+        background: #FFF;
+        color: #922201;
+        font-size: 33px;
+        text-align: center;
+        margin-top: 34px;
+        line-height: 51px;
+
+    }
+
+    .cot {
+        width: 272px;
+        height: 51px;
+        line-height: 51px;
+        border-radius: 8px;
+        background: #FFF;
+        color: #922201;
+        font-size: 33px;
+        text-align: center;
+        margin-top: 34px;
+
+    }
+
+    .name {
+        padding: 0 20px;
+    }
+
+    .phone img {
+        width: 36px;
+        height: 36px;
+
+    }
+
+    .mail {
+        width: 498px;
+        height: 50px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .le{
+        margin-right: 20px;
+        margin-left: 46px;
+    }
+    .le,.ri{
+        border: 2px solid #fff;
+        padding: 0 10px;
+        box-sizing: border-box;
+        align-items: center;
+        border-radius: 9px;
+    }
+</style>
+
+</html>
